@@ -1,0 +1,5 @@
+import createIconComponent from '../../utils/createIconComponent';
+
+const svg = '<%= svg %>';
+
+export default createIconComponent(svg);
