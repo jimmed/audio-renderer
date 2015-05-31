@@ -31,7 +31,7 @@ class App extends Component {
           Reset
         </button>
         {this.renderFileDetails()}
-        <AudioRenderer width={800} height={100} type="div" />
+        <AudioRenderer width={800} height={600} />
       </div>
     );
   }
@@ -69,7 +69,7 @@ export default Marty.createContainer(App, {
   listenTo: ['SongStore'],
   fetch: {
     state() {
-      return this.app.SongStore.getState();
+      return this.app.SongStore.state;
     }
   },
   done(props) {
