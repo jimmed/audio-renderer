@@ -1,9 +1,5 @@
 var webpack = require('webpack');
 
-if(!process.env.LENS_API_URL) {
-  throw new Error('You must set your LENS_API_URL environment variable.');
-}
-
 module.exports = {
   entry: [
     './src/index.js',
@@ -15,14 +11,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
   },
-  plugins: [
-    new webpack.EnvironmentPlugin([
-      'LENS_API_URL',
-      'GITHUB_CLIENT_ID',
-      'DRIBBBLE_CLIENT_ID',
-      'ANGELLIST_CLIENT_ID',
-    ])
-  ],
+  plugins: [],
   resolve: {
     alias: {
       'when/lib/Promise': 'es6-promise' // swap `when` with 'es6-promise'
